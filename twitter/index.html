@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Твиттер Denis Stan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Vollkorn:400,600i,700&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<!-- Left column -->
+			<div class="col-md-4">
+				<div class="card mb-3">
+					<div class="profile-background"></div>
+					<div class="profile-avatar">
+						<img src="img/1.jpg" alt="Stan Denis">
+					</div>
+					<div class="card-body">
+						<h2 class="profile-title">Miron Stan</h2>
+						<div class="profile-description"><p>Переверстал страницу Твиттера</p></div>
+						<ul class="stats">
+							<li class="stats-item">
+								<b class="stats-title">Твиты</b>
+								<b class="stats-count" id="tweetsCounter"></b>
+							</li>
+							<li class="stats-item">
+								<b class="stats-title">Лайки</b>
+								<b class="stats-count">999</b>
+							</li>
+							<li class="stats-item">
+								<b class="stats-title">Репосты</b>
+								<b class="stats-count">777</b>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // Left column -->
+			<!-- Right column -->
+			<div class="col-md-8">
+				<div class="card mb-3">
+					<div class="card-body">
+		<form id="postNewTweet">
+		  <div class="form-group">
+		    <input id="tweetText" type="text" class="form-control" id="exampleInputEmail1"  placeholder="Что нового?">
+		  </div>
+		  
+		  <button type="submit" class="btn btn-primary">Твитнуть</button>
+		</form>
+					</div>
+				</div>
+					<div class="card card-title-only">
+					<div class="h4 mb-0">			Твиты пользователя
+					</div>	
+				<!-- Tweets list-->
+				<div id="tweetsList">
+
+
+
+					</div>
+				</div>
+				<!-- // Tweets list-->
+			<!-- Footer -->
+				<footer class="footer">
+					<p class="footer-copyright">
+						<i class="fas fa-code"></i> &#8594; <i class="fa fa-heart"></i> &#8594; <span class="molib"> molibden</span>
+					</p>
+				</footer>
+			<!-- // Footer -->
+			</div>
+			<!-- // Right column -->
+		</div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
