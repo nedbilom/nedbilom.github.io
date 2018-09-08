@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.header {
+  background: url(./img/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.menu {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.logo {
+  position: absolute;
+  left: 230px;
+  top: 15px;
+}
+.menu_tel {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+}
+.telefone {
+  color: white;
+  text-decoration: none;
+  border: 2px solid yellow;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 0px 20px 0 30px;
+  letter-spacing: .8px;
+  line-height: 10px;
+}
+.nav {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  height: 100px;
+  width: 500px;
+  left: 455px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: row wrap;
+  list-style: none;
+}
+.nav li {
+  display: inline-block;
+}
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 41px;
+  text-transform: uppercase;
+}
+.nav a:hover {
+  border-bottom: 2px solid #fed136;
+}
+.title {
+  margin: 0 auto;
+  display: block;
+  width: 670px;
+  margin-top: 250px;
+  font-size: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1.88px;
+}
+.header_desc {
+  color: #2e2f29;
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  font-size: 59px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -1.48px;
+}
+.header_btn {
+  background-color: #fed136;
+  width: 240px;
+  height: 65px;
+  color: #484543;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  margin-left: 550px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.header_btn:hover {
+  background-color: #ffdd64;
+}
+.header_btn:focus {
+  outline: #fed136;
+}
+.section_title {
+  display: block;
+  width: 350px;
+  text-align: center;
+  margin: 0 auto 0;
+  color: #222222;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 75px;
+  text-transform: uppercase;
+}
+section {
+  padding-top: 120px;
+}
+.section_desc {
+  display: block;
+  width: 300px;
+  margin: 0 auto 75px;
+  color: #777777;
+  font-size: 16px;
+  font-weight: 400;
+}
+.container {
+  display: flex;
+  width: 910px;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+.container_item {
+  text-indent: 1.5em;
+  width: 250px;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container2 {
+  margin-bottom: 0;
+}
+.item_title {
+  color: #222222;
+  margin: 25px 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.45px;
+}
+.item_desc {
+  width: 248px;
+  height: 56px;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.35px;
+  justify-content: center;
+}
+.portfolio {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+.portfolio_item {
+  width: 291px;
+  height: 301px;
+  margin-bottom: 135px;
+}
+.section_des {
+  display: block;
+  width: 300px;
+  margin: 0 auto 0;
+  color: #777777;
+  font-size: 16px;
+  font-weight: 400;
+}
+.about {
+  width: 824px;
+  margin: 0 auto;
+}
+.about_item {
+  text-align: right;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.about_title {
+  font-weight: 700;
+  color: #222222;
+  font-size: 18px;
+  letter-spacing: -0.45px;
+  text-transform: uppercase;
+}
+.capitell {
+  display: block;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #222222;
+  font-size: 18px;
+  letter-spacing: -0.45px;
+}
+.about_item img {
+  width: 183px;
+  height: 183px;
+}
+.about_desc {
+  width: 283px;
+  margin-right: 38px;
+}
+.opisaniya {
+  color: #777777;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: -0.35px;
+}
+.about_item_reverse {
+  flex-direction: row-reverse;
+  text-align: left;
+  margin-right: -40px;
+}
+.about_item_reverse .about_desc {
+  margin-left: 38px;
+}
+.footer {
+  margin-top: 117px;
+  margin-bottom: 112px;
+  text-align: center;
+color: #555555;
+font-size: 14px;
+font-weight: 400;
+letter-spacing: -0.35px;
+}
