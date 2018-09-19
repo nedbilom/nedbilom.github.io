@@ -1,65 +1,90 @@
 body {
-	font-family: 'Lato', sans-serif;
-	color: #000;
+  font-family: "Lato", sans-serif;
+  color: #000;
 }
 
 img {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .header-title-2 {
-	color: #000000;
-	font-family: 'Playfair Display', serif;
-	font-size: 36px;
-	font-weight: 400;
-	letter-spacing: 0.29px;
-	margin-bottom: 45px;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.29px;
+  margin-bottom: 45px;
 }
 
 .container {
-	width: 1050px;
-	margin-right: auto;
-	margin-left: auto;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  // Для ширины экрана 768px и более
+
+  @media (min-width: 620px) {
+  }
+
+  // Для ширины экрана 1460px и более
+
+  @media (min-width: 1460px) {
+    width: 1050px;
+  }
 }
 
 .header-1 {
-	color: #000000;
-	font-family: "Playfair Display", serif;
-	font-size: 50px;
-	font-weight: 400;
-	letter-spacing: 0.41px;
-	text-align: center;
-	margin-top: 0;
-	margin-bottom: 85px;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: 0.41px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 45px;
+
+  // Для ширины экрана 1460px и более
+  @media (min-width: 1460px) {
+    font-size: 50px;
+    margin-bottom: 85px;
+  }
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
-.mb-70 {
-	margin-bottom: 70px !important;
+
+.header-1--cta {
+margin-bottom: 25px;
+  // Для ширины экрана 1460px и более
+  @media (min-width: 1460px) {
+    margin-bottom: 70px;
+  }
 }
 
 .button {
-	display: inline-block;
-	height: 50px;
-	padding: 18px 45px 0px;
-	border: 1px solid #41475b;
-	background-color: #ffffff;
-	line-height: 1;
-	color: #000000;
-	font-family: Avenir;
-	font-size: 18px;
-	font-weight: 500;
-	transition: all 0.2s ease-in;
-		&:hover {
-		text-decoration: none;
-		background-color: #000;
-		color: #fff;
-	}
+  display: inline-block;
+  height: 50px;
+  padding: 18px 45px 0px;
+  border: 1px solid #41475b;
+  background-color: #ffffff;
+  line-height: 1;
+  color: #000000;
+  font-family: Avenir;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in;
+  &:hover {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+  }
 }
 
 .cta-section {
-	margin-bottom: 145px;
+  margin-bottom: 145px;
 }

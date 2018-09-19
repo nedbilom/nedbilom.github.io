@@ -1,21 +1,18 @@
-.nav-wrapper__sticky {
-	width: 1440px;
-	height: 92px;
-}
-
 .nav-wrapper {
-	border-bottom: 1px solid #f2ede7;
-	position: sticky;
-	top: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	// padding-top: 92px;
+	padding-top: 30px;
 	background-color: #fff;
-	width: 1440px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 220px;
+	// margin-bottom: 220px;
+	margin-bottom: 80px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	// justify-content: space-between;
 	align-items: center;
-	z-index: 2;
 }
 
 .logo {
@@ -23,7 +20,7 @@
 }
 
 .nav {
-
+	display: none;
 }
 
 .nav__item {
@@ -45,4 +42,32 @@
 		text-decoration: none;
 		font-weight: 600;
 	}
+}
+
+// Для ширины экрана 768px и более
+
+@media (min-width: 620px) {
+	.nav {
+		display: block;
+	}
+	.nav-wrapper {
+		padding-top: 50px;
+		padding-left: 20px;
+		padding-right: 20px;
+		justify-content: space-between;
+		margin-bottom: 100px;
+	}
+}
+
+// Для ширины экрана 1460px и более
+
+@media (min-width: 1460px) {
+	.nav-wrapper {
+		padding-top: 92px;
+		padding-left: 0;
+		padding-right: 0;
+		width: 1440px;
+		margin-bottom: 220px;
+	}
+
 }

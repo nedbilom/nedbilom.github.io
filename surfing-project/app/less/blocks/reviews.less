@@ -1,17 +1,31 @@
 .reviews {
-	width: 260px;
-	margin-right: 20px;
+	width: 100%;
+	margin-left: 10px;
+	order: 1;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
-.reviews__title{
+.reviews__title {
 	.header-title-2;
+	text-align: center;
+	width: 100%;
 }
 
 .review-item{
+	width: 260px;
 	position: relative;
 	margin-bottom: 25px;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #e7e7e7;
+	margin-right: 0px;
+		&:last-child {
+			margin-right: 0;
+		}
 
 		&:before {
 		position: absolute;
@@ -46,4 +60,30 @@
 		&:before {
 			content: "-  ";
 		}
+}
+
+@media (min-width: 630px) {
+	.reviews {
+		flex-direction: row;
+		margin-left: 0px;
+	}
+	.review-item {
+		margin-right: 50px;
+	}
+}
+
+// Для ширины экрана 1460px и более
+
+@media (min-width: 1280px) {
+	.reviews {
+		width: 260px;
+		order: 0;
+		margin-right: 20px;
+	}
+	.reviews__title {
+		text-align: left;
+	}
+	.review-item {
+		margin-right: 0px;
+	}
 }

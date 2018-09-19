@@ -1,29 +1,55 @@
 .instructors-wrapper {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 255px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 50px;
+  align-items: center;
+  // Для ширины экрана 1460px и более
+  @media (min-width: 900px) {
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+  // Для ширины экрана 1460px и более
+  @media (min-width: 1460) {
+    flex-direction: row;
+    margin-bottom: 255px;
+  }
 }
 
 .instructor {
-	text-align: center;
+  text-align: center;
+  margin-bottom: 50px;
+  // Для ширины экрана 1460px и более
+  @media (min-width: 1460px) {
+    margin-bottom: 0px;
+  }
 }
 
 .instructor__photo {
-	margin-bottom: 30px;
+  margin-bottom: 15px;
+  // Для ширины экрана 1460px и более
+  @media (min-width: 1460px) {
+    margin-bottom: 30px;
+  }
 }
 
 .instructor__name {
-	color: #000000;
-	font-family: "Playfair Display", serif;
-	font-size: 30px;
-	font-weight: 400;
-	letter-spacing: 0.28px;
-	margin-bottom: 10px;
+  color: #000000;
+  font-family: "Playfair Display", serif;
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.28px;
+  margin-bottom: 10px;
+
+  // Для ширины экрана 1460px и более
+  @media (min-width: 1460px) {
+    font-size: 30px;
+  }
 }
 
 .instructor__students {
-	color: #2ab738;
-	font-size: 15px;
-	font-weight: 500;
-	letter-spacing: 0.14px;
+  color: #2ab738;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.14px;
 }
