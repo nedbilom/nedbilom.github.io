@@ -1,0 +1,122 @@
+/* font-family: 'Titillium Web', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Titillium Web', sans-serif;
+	background-color: #4c505d;
+}
+p {
+	margin: 0;
+	padding: 0;
+}
+.main {
+	overflow: hidden;
+	margin: 100px auto 0px;
+	width: 765px;
+	display: flex;
+	flex-direction: row;
+}
+.bgc {
+	height: 551px;
+	width: 275px;
+	background: url(./bg.jpg) no-repeat -280px;
+	background-size: cover;
+	border-radius: 0 8px 8px 0;
+}
+.loginForm {
+	position: relative;
+	padding: 70px 100px 25px 55px;
+	background-color: #fff;
+	width: 490px;
+	height: 551px;
+	border-radius: 8px 0 0 8px;
+}
+.loginForm:after {
+	content: "";
+	position: absolute;
+	bottom: 70px;
+	left: 0;
+	width: 490px;
+	height: 1px;
+	background-color: #e7eaef;
+}
+.loginForm_upTitle {
+	line-height: 1em;
+	width: 140px;
+	margin: 0;
+	text-transform: uppercase;
+	color: #9fa6b3;
+	font-size: .5em;
+	font-weight: 700;
+	letter-spacing: .2em;
+}
+
+h1 {
+	font-size: 2.2em;
+	margin: 0;
+	margin-top: 15px;
+	padding: 0;
+	margin-left: -3px;
+	font-weight: 300;
+	color: #636367;
+}
+.loginForm_desk {
+	margin-top: 15px;
+	margin-bottom: 50px;
+	font-size: 0.6em;
+	line-height: 2em;
+	color: #bbc1cc;
+}
+.loginForm_socButton {
+	box-sizing: border-box;
+	width: 335px;
+	height: 55px;
+	padding: 25px 0 20px;
+	text-transform: uppercase;
+	border: 1px solid #e7eaef;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+.loginForm_socButton:hover {
+	border: none;
+	cursor: pointer;
+	box-shadow: #777c85;
+	box-shadow: 0px 0px 30px -9px rgba(0,0,0,0.3);
+}
+.loginForm_socButton p {
+	color: #636367;
+	font-weight: 700;
+	width: 140px;
+	margin: 0 auto;
+	font-size: .55em;
+	letter-spacing: .1em;
+}
+.icons {
+	margin-left: 20px;
+	margin-top: -5px;
+	width: 15px;
+	height: 15px;
+	float: left;
+}
+.footer {
+	margin-top: 80px;
+}
+.PS {
+	width: 200px;
+	float: left;
+	color: #636367;
+	font-size: .7em;
+}
+.userEmail {
+	cursor: pointer;
+	float: right;
+	color: #acd16e;
+	width: 115px;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: .7em;
+	font-weight: 700;
+	letter-spacing: .2em;
+}
