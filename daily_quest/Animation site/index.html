@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Website animation</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Play:400,700"
+      rel="stylesheet"
+    />
+		<link rel="stylesheet" href="./style.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <div class="overlay"><h1>Анимация на сайте с помощью TweenMax</h1></div>
+    <div class="wrapper">
+      <div class="logo">Hearcamen'</div>
+      <div class="nav">
+        <ul>
+          <li class="menuItem">Главная</li>
+          <li class="menuItem">Задонатить</li>
+          <li class="menuItem">Мета</li>
+          <li class="menuItem">Поиск</li>
+        </ul>
+      </div>
+      <div class="social-media">
+        <ul>
+          <li><i class="fab fa-facebook-f" aria-hidden="true"></i></li>
+          <li><i class="fab fa-instagram" aria-hidden="true"></i></li>
+          <li><i class="fab fa-twitter" aria-hidden="true"></i></li>
+        </ul>
+      </div>
+      <div class="side-strip"><span>Разминка для шеи</span></div>
+      <div class="header">
+        <h1>
+          Hello, World!
+        </h1>
+        <p>
+          Петуния вышла замуж не за Дурсля, а за университетского профессора, и Гарри попал в гораздо более благоприятную среду. У него были частные учителя, дискуссии с отцом, а главное — книги, сотни и тысячи научных и фантастических книг. 
+        </p>
+        <button>Explore</button>
+      </div>
+      <div class="bottom-bar">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <h6>
+                Крайне маловероятный день</h6>
+              <p>
+                …Дыра в стене стремительно разрасталась, образуя большую арку; за ней открывался вид на длинные ряды магазинов с рекламными плакатами, на которых красовались котлы и драконья печень.
+              </p>
+            </div>
+            <div class="col-4">
+              <h6>Всё, во что я верю, — ложь</h6>
+              <p>
+                Голова Гарри непрерывно крутилась во все стороны. Это было всё равно, что перелистывать справочник магических вещей во второй редакции настольной игры «Подземелья и драконы» (он не играл в настольные игры, но это не мешало ему с удовольствием читать книги правил).
+              </p>
+            </div>
+            <div class="col-4">
+              <h6>Сравнивая варианты реальности</h6>
+              <p>
+                По залу пошло шевеление, люди начали подниматься со своих мест, и тут профессор громко топнула ногой. Звук получился такой, что у Гарри возникла новая ассоциация к словосочетанию «Удар судьбы». Все замерли.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+		
+    <script type='text/javascript'>
+      TweenMax.to(".overlay h1", 2, {
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut
+			});
+			TweenMax.to(".overlay", 2, {
+				delay: 1,
+				top: '-100%',
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".logo", 1, {
+				delay: 2.4,
+				opacity: 0,
+				y: 20,
+        ease: Expo.easeInOut
+			});
+			TweenMax.staggerFrom('.nav ul li', 1, {
+				delay: 2.4, opacity: 0, y: 20, ease: Expo.easeInOut
+			}, 0.2)
+			TweenMax.staggerFrom('.social-media ul li', 1, {
+				delay: 2.4, opacity: 0, y: 20, ease: Expo.easeInOut
+			}, 0.2)
+			TweenMax.from(".side-strip", 2, {
+				delay: 2.4,
+				opacity: 0,
+				y: 40,
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".row", 2, {
+				delay: 2.4,
+				opacity: 0,
+				x: 40,
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".row h6", 2, {
+				delay: 3,
+				opacity: 0,
+				y: 40,
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".row p", 2, {
+				delay: 3.2,
+				opacity: 0,
+				y: 20,
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".header h1", 2, {
+				delay: 3.2,
+				opacity: 0,
+				y: 20,
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".header p", 2, {
+				delay: 3.2,
+				opacity: 0,
+				y: 20,
+        ease: Expo.easeInOut
+			});
+			TweenMax.from(".header button", 2, {
+				delay: 3.6,
+				opacity: 0,
+				y: 20,
+        ease: Expo.easeInOut
+			});
+    </script>
+  </body>
+</html>
