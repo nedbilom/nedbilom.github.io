@@ -1,0 +1,29 @@
+body {
+  background-color: #f1f1f1;
+}
+
+h1 {
+  color: #cf649a;
+}
+
+h2, h3 {
+  color: #669b9c;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.section {
+  border: 2px dashed #669b9c;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+pre {
+  background-color: #669b9c;
+  border: 1px solid #dadbdf;
+  padding: 5px;
+  color: #f1f1f1;
+}
+/*# sourceMappingURL=style.css.map */

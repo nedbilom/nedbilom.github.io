@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Изучаем sass</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Sass</h1>
+
+<div class="section"><h2>Синтаксис sass</h2>
+<h3>Отличия sass и scss</h3>
+<ul>
+  <li>.sass = за счет вложенности</li>
+  <li>.scss = синтаксис такой же как и в css</li>
+  <li>Так же, scss отличается от sass написанием некоторых функций</li>
+</ul>
+</div>
+<div class="section">
+<h2>Расширение возможностей CSS</h2>
+<h3>Правило вложености</h3>
+  <p>SASS дает возможность вложенность вложенности правил </p>
+  <pre>
+    #main p
+      color: #00ff00
+      width: 85%
+        .redbox
+          background-color: #ff0000
+          color: #000000
+  = #main p .redbox
+  </pre>
+  <h3>Привязка к родительскому селектору</h3>
+ <p>Привязка к родительскому селектору происходит за счет амперсанда (&)</p>
+  <pre>
+  #main
+    color: black
+    a 
+      font-weight: bold
+      &:hover
+        color: red
+  = #main a:hover
+</pre>
+  <p>Хорошо подходит для связки с БЭМ</p>
+<h3>Вложенные свойства</h3>
+  Можно разбивать css свойства которые пишутся через дефис типа margin:
+  <pre>
+  .selector
+    margin:
+      top: 10px
+      bottom: 15px
+      left: 20px
+      right: 30px
+  = .selector {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  margim-right: 30px;
+  }
+</pre>
+<h3>Селкторы-шаблоны</h3>
+  <p>Создается некий шаблон, который используется для нескольких разных html-элементов на страницы.</p>
+  <pre>
+  %item-base
+    display: inline-block
+    transition: all .5s ease
+    max-width: 320px
+  .item-type-one
+    @extend: %item-base
+    margin-top: 20px
+  .item-type-two
+    @extend: %item-base
+    margin-top: 10px
+</pre>
+  <p>Все классы, в которых встречается extend через запятую перечисляются в шаблоне при компиляции:</p>
+  <pre>
+  .item-type-one, .item-type-two {
+    display: inline-block
+    transition: all .5s ease
+    max-width: 320px
+  }
+</pre>
+   <p>А затем идут уникальные стили элементов</p>
+</div>
+<div class="section">
+  <h2>Переменые</h2>
+  <p>Есть возможность создавать свои переменые, в них можно пихать цвета, значения, единицы измерения...</p>
+  <pre>
+  &name: #fff
+  .button
+    background-color: &name
+</pre>
+  <h2>Операции с числами и строками</h2>
+  <p>Стандартные арифметические вычисления</p>
+  <pre>
+  &summ: (10+10) / 2
+  .selector
+    margin: 
+      top: &summ + px
+</pre>
+  <p> Пример конкатинации(объединение)<br>
+    margin-top: 10px
+  </p>
+  <h2>Операция с цветами</h2>
+  <p>Цвета так же можно складывать, делить и умножать. отдельно складываются R, G, и B</p>
+  <pre>
+  &color1: #440203 + #550506
+  &color2: #010203 * 2
+  &color3: rgba(180, 0, 0, .75) + rgba(20m 255,0, 0.75)
+</pre>
+  <p>При сложение цвета в rgba формате, значения прозрачности не должно отличаться. <br>
+    Так же в sass есть специальные функции для работы с прозрачностью цвета
+  </p>
+  <pre>
+  $translucent-red: rgba(255, 0, 0, 0.5);
+  p
+    color: opacify($translucent-red, 0.3)
+    background-color: transparentize($translucent-red, 0.25)
+</pre>
+  <p>Функция opacify складывает прозрачность, таким образом в примере у нас получится color: 255, 0, 0, 0.8. А функция transparentize вычитает, и в примере значение прозрачности будет равно .25</p>
+</div>
+<div class="section">
+  <h2>Директивы и правила (@import)</h2>
+  <p>Можно импортировать в sass файл любые другие sass|scss файлы. Путем @import</p>
+  <span>Сработает как обычный css, если:</span>
+  <ul>
+    <li>установлено расширение css (@import "foo.css");</li>
+    <li>присутствует медиапараметр screen (@import "foo" screen;)</li>
+    <li>В пути присутствует @import: "http://foo.com/bar;"</li>
+    <li>Или в пути присутствует @import url(foo);</li>    
+  </ul>
+  <p>В таком случае в css скампилируется как обычный import и файлы загружены не будут.</p>
+  <span>Для того что бы файл полноценно был импортирован в основной sass файл:</span>
+  <ul>
+    <li>Необходимо чтобы расширение файла было .sass (@import "media.sass")</li>
+    <li>Или .scss (@import "media.scss")</li>
+    <li>Либо без расширения если нужно импортировать простой css файл (@import "media";)</li>
+  </ul>
+  <p>Файлы начинающиейся с нижнего подчеркивания (_media.sass) называются фрагментами, и для импорта не требуют указания расширения и подчеркивания (просто media)</p>
+  <p>Импорт указывается именно в том месте где указываете директиву импорта</p>
+  <h2>@at-root</h2>
+  <p>Поднимает правило над родителем в каскадности css, Таким образом:</p>
+  <pre>
+  .selector
+    margin-top: 10px
+  @at-root
+    .item
+      background-color: #ccc
+    .item
+      background-color: #fff
+</pre>
+  <span>Будет компилироваться в:</span>
+  <pre>
+  .selector {
+    margin-top: 10px;
+  }
+  .item {
+    background-color: #ccc;
+  }
+  .selector .item {
+    background-color: #fff;
+  }
+</pre>
+</div>
+<div class="section">
+  <h2>Миксины</h2>
+  <p>Блоки sass кода или примиси-шаблоны, которые могут применять аргументы. Что-то вроде функции, которая может принять аргумент выполнить огромный объем работы, и выдать результат в зависимости от входного параметра. Миксин объявляется директивой @mixin </p>
+  <pre>
+  @mixin nameMixin($color)
+    border: $color 1px solid
+</pre>
+  <p>Далее при необходимости задать в ходе верстки бордер определенному элементу мы инклюдим данный миксин:</p>
+  <pre>
+  p
+    @include border(#333)
+</pre>
+  <p>Входной аргумент у нас является цветoм бордера, и на выходе получаем:</p>
+  <pre>
+  p {
+  border: #333 1px solid
+  }
+</pre>
+  
+</div>
+</body>
+</html>
