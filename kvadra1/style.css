@@ -352,7 +352,7 @@ nav.wrapper {
 /* About */
 .about_article {
     font-family: 'PT Sans', sans-serif;
-    text-align: left;
+    text-align: justify;
     font-size: 16px;
     color: #000000;
     font-style: normal;
@@ -362,6 +362,7 @@ nav.wrapper {
     padding-left: 40px;
     display: flex;
     flex-direction: column;
+    word-wrap: break-word;
 }
 .article_img {
     height: 173px;
