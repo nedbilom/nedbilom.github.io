@@ -27,19 +27,18 @@
           <div class="header_contacts_title">Адрес:</div>
           г. Красноярск, ул. Академика<br> Вавилова, д. 1, офис 224
       </div>
-      <div>           
-        <img src="./img/logo.png" alt="Кадастровое агентство Квадра">
+      <div class="logo_wrapper">           
+        <a href="#"><img class="header_logo" src="./img/logo.png" alt="Кадастровое агентство Квадра"></a>
       </div>
       <div class="header_contacts telephone">
           <div class="header_contacts_title">Телефон:</div>
           <a href="tel:+7 (391) 232-21-38" class="header_contacts_tel">+7 (391) 232-21-38</a><br>
           <a href="tel:+7 (983) 202-95-99" class="header_contacts_tel">+7 (983) 202-95-99</a><br>
       </div>
-  </div>
-
-  <div class="header_container header_desc">
-    <div class="desc"><span class="desc_title">Любой вид кадастровых работ:</span><br> межевание земельных участков,<br> подготовка технического плана,<br> землеустроительная экспертиза,<br> заключение кадастрового инженера</div>
-  </div>
+      <div class="header_container header_desc">
+        <div class="desc"><span class="desc_title">Любой вид кадастровых работ:</span><br> межевание земельных участков,<br> подготовка технического плана,<br> землеустроительная экспертиза,<br> заключение кадастрового инженера</div>
+      </div>
+    </div>
 </header>
 <!-- // Header -->
 
@@ -48,7 +47,7 @@
     <ul class="nav_container">
         <li class="nav_item"><a href="#" class="nav_link">Главная</a></li>
         <li class="nav_item"><a href="./about.html" class="nav_link">О компании</a></li>
-        <li class="nav_item nav_second_hover"><a href="#" class="nav_link">Услуги</a>
+        <li class="nav_item nav_second_hover"><a href="./services.html" class="nav_link">Услуги</a>
           <ul class="nav_second">
             <li class="nav_second_item"><a href="./services/mezhevanie.html">Межевание земельных участков</a></li>
             <li class="nav_second_item"><a href="./services/ti.html">Техническая инвентаризация</a></li>
@@ -62,7 +61,7 @@
           </ul>
         </li>
         <li class="nav_item"><a href="./kontakty.html" class="nav_link">Контакты</a></li>
-        <li class="nav_item"><a href="./aktsii.html" class="nav_link">Акции и скидки</a></li>
+        <li class="nav_item"><a href="./aktsii.html" class="nav_link nav_link_last">Акции и скидки</a></li>
     </ul>
   </nav>
 <!-- // Nav -->
@@ -156,10 +155,10 @@
       <!-- Form -->
       <div class="about_form">
         <div class="about_form_title">Оставьте заявку</div>
-        <div class="about_form_desc">Наш специалист<br> свяжется с Вами</div>
-        <input class="form_input" placeholder="* Ваше имя: " type="text" size="1" maxlength="100" value="" name="d[0]" id="d[0]" required="">
-        <input class="form_input" placeholder="* Эл. почта: " type="text" size="1" maxlength="100" value="" name="d[1]" id="d[1]" required="">
-        <input class="form_input" placeholder="* Телефон: " type="text" size="1" maxlength="100" value="" name="d[2]" id="d[2]" required="">
+        <div class="about_form_desc">Наш специалист свяжется с Вами</div>
+        <input class="form_input" placeholder="Ваше имя: " type="text" size="1" maxlength="100" value="" name="d[0]" id="d[0]" required="">
+        <input class="form_input" placeholder="Эл. почта: " type="text" size="1" maxlength="100" value="" name="d[1]" id="d[1]" required="">
+        <input class="form_input" placeholder="Телефон: " type="text" size="1" maxlength="100" value="" name="d[2]" id="d[2]" required="">
         <textarea class="form_input" placeholder=" Комментарии: " cols="1" rows="1" name="d[3]" id="d[3]"></textarea>
         <button class="input_button" type="submit"><span>Отправить</span></button>
       </div>
