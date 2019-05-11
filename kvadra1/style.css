@@ -641,7 +641,7 @@ nav.wrapper {
         width: 100%;
     }
     .header_logo {
-        width: 80%;
+        max-width: 400px;
     }
     .adress, .telephone {
         width: 50%;
@@ -706,7 +706,7 @@ nav.wrapper {
         margin-bottom: 10px;
     }
     .header_logo {
-        width: 80%;
+        max-width: 70%;
     }
     .header_desc {
         width: 100%;
