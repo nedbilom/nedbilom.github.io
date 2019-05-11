@@ -625,7 +625,7 @@ nav.wrapper {
 /* // Footer */
 
 /* Media table */
-@media all and (min-width: 640px) and (max-width:960px){
+@media screen and (max-width:960px){
     /* Header */
     .logo_wrapper {
         width: 100%;
@@ -680,7 +680,7 @@ nav.wrapper {
     }
 }
 
-@media all and (min-width: 360px) and (max-width:670px){
+@media screen and (max-width:670px){
     .feedback_form {
         flex-direction: column;
         align-items: center;
@@ -696,7 +696,7 @@ nav.wrapper {
 }
 
 /* Media mobile */
-@media all and (min-width:360px) and (max-width:640px) {
+@media screen and (max-width:640px) {
     .logo_wrapper {
         width: 100%;
         order: -2;
