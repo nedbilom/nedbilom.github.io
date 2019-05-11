@@ -661,6 +661,9 @@ nav.wrapper {
         order: -1;
         margin-left: 35px;
     }
+    .about_article {
+        text-align: justify;
+    }
     .form_input {
         width: 100%;
         max-width: 1000px;
