@@ -740,6 +740,9 @@ nav.wrapper {
         width: 100%;
         max-width: 1000px;
     }
+    .about_article {
+        text-align: justify;
+    }
     .cards {
         justify-content: space-around;
         margin-bottom: 20px;
