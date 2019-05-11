@@ -696,7 +696,7 @@ nav.wrapper {
 }
 
 /* Media mobile */
-@media all and (min-width: 360px) and (max-width:640px) {
+@media all and (min-width:360px) and (max-width:640px) {
     .logo_wrapper {
         width: 100%;
         order: -2;
