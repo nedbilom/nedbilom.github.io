@@ -640,6 +640,9 @@ nav.wrapper {
     .desc {
         width: 100%;
     }
+    .header_logo {
+        width: 80%;
+    }
     .adress, .telephone {
         width: 50%;
         order: 1;
