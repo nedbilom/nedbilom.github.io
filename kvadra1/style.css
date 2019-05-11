@@ -703,7 +703,7 @@ nav.wrapper {
         margin-bottom: 10px;
     }
     .header_logo {
-        width: 335px;
+        width: 100%;
     }
     .header_desc {
         width: 100%;
