@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./normolize.css">
+    <link rel="stylesheet" href="./libs/hamburgers.css">
+    <link rel="stylesheet" href="./libs/mmenu/css/jquery.mmenu.all.css">
+    <link href="https://fonts.googleapis.com/css?family=Podkova&amp;subset=cyrillic" rel="stylesheet">
+    <!-- Свои стили подключать последними!!! -->
+    <style>
+        /* Style for hamburger */
+        .hamburger_wrapper {
+            background: #5dd;
+            height: 58px;
+        }
+        .hamburger {
+            position: absolute;
+            background-color: #10a39e;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+        .hamburger .hamburger-box {
+            width: 34px;
+            z-index: 99;
+        }
+        .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+            border-radius: 0;
+            width: 34px;
+            height: 5px;
+            background-color: white;
+            z-index: 99;
+        }
+        .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+            background-color: white;
+            z-index: 99;
+        }
+    /* // Style for hamburger */
+        html.mm-opened {
+          overflow-y: scroll;
+        }
+        .mm-panels > .mm-panel.mm-hashnavbar {
+            left: -18px;
+        }
+        .mm-navbar {
+            height: auto;
+            border: none;
+            margin-top: 10px;
+        }
+        .mm-menu .mm-navbar a {
+            color: black;
+        }
+        #my-menu {
+        background: #5dd;
+        padding: 0;
+        color: #ecfaf9;
+   }
+        li::after {
+            background: #ecfaf9;
+        }
+        .menu-list-item {
+        font-family: "Podkova", sans-serif;
+        font-size: 16px;
+        }
+        .menu-list-item:active {
+            background-color: #cbe46f;
+        }
+        .mm-listview>li>a {
+            padding: 20px;
+        }
+        .not-active {
+            display: none;
+        }
+        /* .mobily_menu {
+            display: none;
+        }
+        @media screen and (max-width:640px) {
+            .mobily_menu {
+            display: block;
+        }
+        } */
+    </style>
+</head>
+<body>
+<div id="my-page">
+    <div id="my-header">
+
+
+<!-- Hamburger -->
+<div class="mobily_menu">
+<div class="hamburger_wrapper">
+        <a id="menu_button" href="#my-menu" class="hamburger hamburger--elastic">
+                <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+            </a>
+</div>
+<!-- // Hamburger -->
+
+<!-- My-menu -->
+<nav id="my-menu" class="menu-list">
+    <ul class="mobile-navigation not-active">
+        <li class="menu-list-item"><a href="#">Главная</a></li>
+        <li class="active menu-list-item"><a href="./about.html">О компании</a></li>
+        <li class="menu-list-item"><a href="./services.html">Услуги</a>
+            <ul class="nav_second">
+                    <li class="menu-list-item"><a href="./services/mezhevanie.html">Межевание земельных участков</a></li>
+                    <li class="menu-list-item"><a href="./services/ti.html">Техническая инвентаризация</a></li>
+                    <li class="menu-list-item"><a href="./services/zem_exp.html">Землеустроительная экспертиза</a></li>
+                    <li class="menu-list-item"><a href="./services/raz-n-str.html">Разрешение на строительство</a></li>
+                    <li class="menu-list-item"><a href="./services/zki.html">Заключение кадастрового инженера</a></li>
+                    <li class="menu-list-item"><a href="./services/isp_ro.html">Исправление реестровой ошибки</a></li>
+                    <li class="menu-list-item"><a href="./services/akt_obsledovanija.html">Акт обследования</a></li>
+                    <li class="menu-list-item"><a href="./services/vinos_gr.html">Вынос границ в натуру</a></li>
+                    <li class="menu-list-item"><a href="./services/shema_kpt.html">Схема расположения земельного участка на кадастровом плане территории</a></li>
+                  </ul>
+                </li>
+        <li class="menu-list-item"><a href="./kontakty.html">Контакты</a></li>
+        <li class="menu-list-item"><a href="./aktsii.html">Акции и скидки</a></li>
+    </ul>
+
+</nav>
+    </div>
+
+
+
+<div id="my-content"></div>
+<div id="my-footer"></div>
+</div>
+<!-- // My-menu -->
+<script src="./libs/jQuery.js"></script>
+<script src="./libs/mmenu/js/jquery.mmenu.all.min.js"></script>
+<script src="./js/common.js"></script>
+<script>
+// Script for hamburger
+
+// // Script for hamburger
+</script>
+</body>
+</html>

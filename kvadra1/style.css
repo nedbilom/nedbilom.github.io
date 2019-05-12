@@ -322,6 +322,7 @@ nav.wrapper {
 }
 
 .input_button {
+    z-index: 0;
     padding: 10px 4px;
     border: none;
     text-align: center;
@@ -623,15 +624,90 @@ nav.wrapper {
     color: #343434;
     letter-spacing: 2.0px;
 }
+.mobily_menu {
+    display: none;
+} 
 /* // Footer */
-
 /* Media table */
 @media screen and (max-width:960px){
+/* Mobily menu */
+    /* Style for hamburger */
+.mobily_menu {
+     display: block;
+}
+.hamburger_wrapper {
+    background: #50cdc9;
+    height: 58px;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+}
+.hamburger {
+    position: absolute;
+    background-color: #10a39e;
+    top: 0;
+    left: 0;
+}
+.hamburger .hamburger-box {
+    width: 34px;
+    z-index: 999999;
+}
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before {
+    border-radius: 0;
+    width: 34px;
+    height: 5px;
+    background-color: white;
+    z-index: 99;
+}
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: white;
+    z-index: 99;
+}
+    /* // Style for hamburger */
+html.mm-opened {
+    overflow-y: scroll;
+}
+.mm-panels > .mm-panel.mm-hashnavbar {
+    left: -18px;
+}
+.mm-navbar {
+    height: auto;
+    border: none;
+    margin-top: 10px;
+}
+.mm-menu .mm-navbar a {
+    color: black;
+    font-family: "Podkova", sans-serif;
+    font-size: 18px;
+}
+#my-menu {
+    background: #50cdc9;
+    padding: 0;
+    color: #fff;
+}
+li::after {
+    background: #ecfaf9;
+}
+.menu-list-item {
+    font-family: "Podkova", sans-serif;
+    font-size: 16px;
+}
+.menu-list-item:active {
+    background-color: #cbe46f;
+}
+.mm-listview>li>a {
+    padding: 20px;
+}
+.not-active {
+    display: none;
+}
+    /* // Mobily menu */
     /* Header */
     .logo_wrapper {
         width: 100%;
         order: -2;
         margin-bottom: 10px;
+        margin-top: 50px;
     }
     .header_desc {
         width: 100%;
@@ -682,6 +758,7 @@ nav.wrapper {
     }
     .footer_contacts {
         margin: 0 auto;
+        margin-top: -100px;
         width: 100%;
         max-width: 80%;
     }
@@ -704,9 +781,17 @@ nav.wrapper {
 
 /* Media mobile */
 @media screen and (max-width:640px) {
+    .mobily_menu {
+        display: block;
+    }
+    /* .hamburger_wrapper {
+        position: fixed;
+        z-index: 2;
+    } */
     .logo_wrapper {
         width: 100%;
         order: -2;
+        margin-top: 50px;
         margin-bottom: 10px;
     }
     .header_logo {

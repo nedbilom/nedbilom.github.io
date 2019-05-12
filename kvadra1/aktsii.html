@@ -11,15 +11,57 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Акции и скидки</title>
     <link rel="stylesheet" href="./normolize.css">
+    <link rel="stylesheet" href="./libs/hamburgers.css">
+    <link rel="stylesheet" href="./libs/mmenu/css/jquery.mmenu.all.css">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Podkova:500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-
+  <div id="my-page">
+    <div id="my-header">
 
 
 
 <!-- Header -->
+<!-- Mobily menu -->
+<!-- Hamburger -->
+<div class="mobily_menu">
+  <div class="hamburger_wrapper">
+          <a id="menu_button" href="#my-menu" class="hamburger hamburger--elastic">
+                  <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                      </span>
+              </a>
+  </div>
+  <!-- // Hamburger -->
+  
+  <!-- My-menu -->
+  <nav id="my-menu" class="menu-list">
+      <ul class="mobile-navigation not-active">
+          <li class="menu-list-item"><a href="./index.html">Главная</a></li>
+          <li class="menu-list-item"><a href="./about.html">О компании</a></li>
+          <li class="menu-list-item"><a href="./services.html">Услуги</a>
+              <ul>
+                      <li class="menu-list-item"><a href="./services/mezhevanie.html">Межевание земельных участков</a></li>
+                      <li class="menu-list-item"><a href="./services/ti.html">Техническая инвентаризация</a></li>
+                      <li class="menu-list-item"><a href="./services/zem_exp.html">Землеустроительная экспертиза</a></li>
+                      <li class="menu-list-item"><a href="./services/raz-n-str.html">Разрешение на строительство</a></li>
+                      <li class="menu-list-item"><a href="./services/zki.html">Заключение кадастрового инженера</a></li>
+                      <li class="menu-list-item"><a href="./services/isp_ro.html">Исправление реестровой ошибки</a></li>
+                      <li class="menu-list-item"><a href="./services/akt_obsledovanija.html">Акт обследования</a></li>
+                      <li class="menu-list-item"><a href="./services/vinos_gr.html">Вынос границ в натуру</a></li>
+                      <li class="menu-list-item"><a href="./services/shema_kpt.html">Схема расположения земельного участка на кадастровом плане территории</a></li>
+                    </ul>
+                  </li>
+          <li class="menu-list-item"><a href="./kontakty.html">Контакты</a></li>
+          <li class="menu-list-item"><a href="#">Акции и скидки</a></li>
+      </ul>
+  </nav>
+</div>
+
+  </div>
+  <!-- // My-menu -->
+<!-- // Mobily menu -->
 <header class="wrapper">
 
   <div class="header_container">
@@ -39,6 +81,7 @@
         <div class="desc"><span class="desc_title">Любой вид кадастровых работ:</span><br> межевание земельных участков,<br> подготовка технического плана,<br> землеустроительная экспертиза,<br> заключение кадастрового инженера</div>
       </div>
     </div>
+
 </header>
 <!-- // Header -->
 
@@ -151,6 +194,8 @@
   </div>
 </footer>
 <!-- // Footer -->
-
-
+<script src="./libs/jQuery.js"></script>
+<script src="./libs/mmenu/js/jquery.mmenu.all.min.js"></script>
+<script src="./js/common.js"></script>
+  </div>
 </html>
