@@ -111,16 +111,23 @@
     <div class="about_container">
 
       <!-- Form -->
-      <div class="about_form">
-        <div class="about_form_title">Оставьте заявку</div>
-        <div class="about_form_desc">Наш специалист<br> свяжется с Вами</div>
-        <input class="form_input" placeholder="* Ваше имя: " type="text" size="1" maxlength="100" value="" name="d[0]" id="d[0]" required="">
-        <input class="form_input" placeholder="* Эл. почта: " type="text" size="1" maxlength="100" value="" name="d[1]" id="d[1]" required="">
-        <input class="form_input" placeholder="* Телефон: " type="text" size="1" maxlength="100" value="" name="d[2]" id="d[2]" required="">
-        <textarea class="form_input" placeholder=" Комментарии: " cols="1" rows="1" name="d[3]" id="d[3]"></textarea>
-        <button class="input_button" type="submit"><span>Отправить</span></button>
-      </div>
-      <!-- // Form -->
+      <form class="feedback_aside">
+          <div class="feedback_aside_success"><span>Спасибо за заявку</span></div>
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="Kvadra Site">
+        <input type="hidden" name="admin_email" value="molibden92@mail.ru">
+        <input type="hidden" name="form_subject" value="Заявка с сайта Kvadra">
+          <!-- END Hidden Required Fields -->
+          <div class="feedback_aside_head">Оставить заявку</div>
+          <p class="feedback_aside_desc">Наш специалист свяжется с Вами</p>
+      
+          <input class="feedback_aside_input" type="text" name="Имя" placeholder="Ваше имя" required>
+          <input class="feedback_aside_input" type="text" name="Почта" placeholder="Эл. почта" required>
+          <input class="feedback_aside_input" type="text" name="Телефон" placeholder="Телефон" required>
+          <textarea class="feedback_aside_comments" placeholder="Комментарии" cols="1" rows="1" name="d[3]" id="d[3]"></textarea>
+          <button class="feedback_aside_button" type="submit"><span>Отправить</span></button>
+      </form>
+    <!-- // Form -->
 
 
       <!-- About -->
@@ -146,17 +153,25 @@
       <!-- // About -->
 
 <!-- Contacts form -->
-<div class="feedback_wrapper">
-  <div class="feedback_container">
-    <h2 class="feedback_title">Оставьте заявку</h2>
-  <div class="feedback_form">
-      <input class="feedback_input" placeholder="* Ваше имя: " type="text" size="1" maxlength="100" value="" name="d[0]" id="d[0]" required="">
-      <input class="feedback_input" placeholder="* Эл. почта: " type="text" size="1" maxlength="100" value="" name="d[1]" id="d[1]" required="">
-      <input class="feedback_input feedback_input_last" placeholder="* Телефон: " type="text" size="1" maxlength="100" value="" name="d[2]" id="d[2]" required="">
-      <textarea class="feedback_area" placeholder=" Комментарии: " cols="1" rows="1" name="d[3]" id="d[3]"></textarea>
-      <button class="feedback_button" type="submit"><span>Отправить</span></button>
-  </div>
-  </div>
+<div class="feedback_bottom_container">
+    <div class="feedback_bottom_wrapper">
+        <form class="feedback_bottom">
+            <div class="feedback_bottom_success"><span>Спасибо за заявку</span></div>
+            <div class="feedback_bottom_title">Оставьте заявку</div>
+            <div class="feedback_bottom_form">
+                <!-- Hidden Required Fields -->
+	            <input type="hidden" name="project_name" value="Kvadra Site">
+	            <input type="hidden" name="admin_email" value="molibden92@mail.ru">
+	            <input type="hidden" name="form_subject" value="Заявка с сайта Kvadra">
+                <!-- END Hidden Required Fields -->
+                <input type="text" class="feedback_bottom_input" name="Имя" placeholder="Ваше имя" required>
+                <input type="text" class="feedback_bottom_input" name="Почта" placeholder="Эл. почта" required>
+                <input type="text" class="feedback_bottom_input" name="Телефон" placeholder="Телефон" required>
+                <textarea name="Комментарий" id="comments" cols="1" rows="1" class="feedback_bottom_comments" placeholder="Комментарии"></textarea>
+                <button class="feedback_bottom_button">Отправить</button>
+        </div>
+        </form>
+    </div>
 </div>
 <!-- // Contacts form -->
 

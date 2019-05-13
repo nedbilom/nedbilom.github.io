@@ -1,3 +1,4 @@
+// Mobily menu
 $('#menu_button').click(function(){
     $('#my-menu').mmenu(
         {
@@ -15,3 +16,39 @@ $('#menu_button').click(function(){
     }
     )
   });
+
+//E-mail Ajax Send
+$("form.feedback").submit(function() { //Change
+	var th = $(this);
+	$.ajax({
+		type: "POST",
+		url: "mail.php", //Change
+		data: th.serialize()
+	}).done(function() {
+        $(th).find('.feedback_success').addClass('feedback_success_active').css('display', 'flex').hide().fadeIn();
+		setTimeout(function() {
+			// Done Functions
+            $(th).find('.feedback_success').removeClass('feedback_success_active').fadeOut();
+            th.trigger("reset");
+	    }, 3000);
+	});
+	return false;
+});
+
+//Bottom Form E-mail Ajax Send
+	$("form.feedback_bottom").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+            $(th).find('.feedback_bottom_success').addClass('feedback_bottom_success_active').css('display', 'flex').hide().fadeIn();
+            setTimeout(function() {
+                // Done Functions
+                $(th).find('.feedback_bottom_success').removeClass('feedback_bottom_success_active').fadeOut();
+                th.trigger("reset");
+            }, 3000);
+		});
+		return false;
+	});
