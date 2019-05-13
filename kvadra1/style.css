@@ -638,6 +638,11 @@ nav.wrapper {
     text-decoration: none;
     color: inherit;
 }
+.icons-vk,
+.icons-fb {
+    width: 48px;
+    height: auto;
+}
 
 .copyright {
     margin-top: 5px;
@@ -880,8 +885,12 @@ li::after {
     }
     .footer_contacts_feedback_item {
         width: 100%;
+        height: auto;
         border: 1px solid rgb(229,229,229);
         margin-bottom: 10px;
+    }
+    .soc_wrap{
+        padding-bottom: 0;
     }
     .footer_wrapper {
         padding-top: 15px;
