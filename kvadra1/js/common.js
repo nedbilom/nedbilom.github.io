@@ -18,17 +18,17 @@ $('#menu_button').click(function(){
   });
 
 //E-mail Ajax Send
-$("form.feedback").submit(function() { //Change
+$("form.feedback_aside").submit(function() { //Change
 	var th = $(this);
 	$.ajax({
 		type: "POST",
-		url: "mail.php", //Change
+		url: "./mail.php", //Change
 		data: th.serialize()
 	}).done(function() {
-        $(th).find('.feedback_success').addClass('feedback_success_active').css('display', 'flex').hide().fadeIn();
+        $(th).find('.feedback_aside_success').addClass('feedback_aside_success_active').css('display', 'flex').hide().fadeIn();
 		setTimeout(function() {
 			// Done Functions
-            $(th).find('.feedback_success').removeClass('feedback_success_active').fadeOut();
+            $(th).find('.feedback_aside_success').removeClass('feedback_aside_success_active').fadeOut();
             th.trigger("reset");
 	    }, 3000);
 	});
@@ -40,7 +40,7 @@ $("form.feedback").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "mail.php", //Change
+			url: "/mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
             $(th).find('.feedback_bottom_success').addClass('feedback_bottom_success_active').css('display', 'flex').hide().fadeIn();
