@@ -38,6 +38,18 @@ body {
     transform: translateY(-3px); /* account for the height of the clock hands */
 }
 
+span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 47%;
+    z-index: 1;
+
+}
+
 .hand {
     width: 50%;
     height: 6px;
@@ -48,15 +60,24 @@ body {
     transform: rotate(90deg);
     transition: all 0.05s;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    border: 1px solid white;
 }
 .second-hand {
+    height: 3px;
     background-color: red;
 }
 
 .min-hand {
-    background-color: green;
+    background-color: black;
+    width: 165px;
+    left: 11%;
 }
 
 .hour-hand {
-    background-color: blue;
+    background-color: black;
+    width: 114px;
+    height: 10px;
+    left: 23%;
+    z-index: 1;
+    top: 49%;
 }
