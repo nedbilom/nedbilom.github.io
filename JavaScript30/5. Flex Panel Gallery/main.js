@@ -1,6 +1,7 @@
 const panels = document.querySelectorAll('.panel');
 
 function toggleOpen() {
+	panels.forEach(panel => panel.classList.remove("open"));
 	this.classList.toggle('open');
 }
 
