@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪💪</title>
+</head>
+
+<body>
+  <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
+  <script>
+    // ## Array Cardio Day 2
+
+    const people = [
+      { name: 'Wes', year: 1988 },
+      { name: 'Kait', year: 1986 },
+      { name: 'Irv', year: 1970 },
+      { name: 'Lux', year: 2015 }
+    ];
+
+    const comments = [
+      { text: 'Love this!', id: 523423 },
+      { text: 'Super good', id: 823423 },
+      { text: 'You are the best', id: 2039842 },
+      { text: 'Ramen is my fav food ever', id: 123523 },
+      { text: 'Nice Nice Nice!', id: 542328 }
+    ];
+
+    // Some and Every Checks
+    // Array.prototype.some() // is at least one person 19 or older?
+    // some() проверяет удовлетворяет ли какой-либо элемент условию, заданному в передаваемой фунции, возвращает true or false
+
+    const isAdult = people.some(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+    console.log({ isAdult });
+
+    // Array.prototype.every() // is everyone 19 or older?
+    // every() проверяет отвечают ли условию ВСЕ элемы массива
+
+    const allAdults = people.every(person => ((new Date()).getFullYear()) - person.year >= 19);
+
+    console.log({ allAdults });
+
+    // Array.prototype.find()
+    // Find is like filter, but instead returns just the one you are looking for
+    // find the comment with the ID of 823423
+    // find() возвращает значение первого элемента, удовлетворяющего условию передоваемой фунции
+
+    const comment = comments.find(comment => comment.id === 823423);
+
+    console.log(comment);
+
+    // Array.prototype.findIndex()
+    // Find the comment with this ID
+    // delete the comment with the ID of 823423
+    // findIndex() возвращает индекс элемента, который удовлетворяет условию передоваемой фунции
+
+    const index = comments.findIndex(comment => comment.id === 823423)
+
+    console.log(index);
+
+    // comments.splice(index, 1);
+    // or create a new massive using slice()
+
+    const newComments = [
+      ...comments.slice(0, index),
+      ...comments.slice(index + 1)
+    ]
+
+    console.log(comments);
+
+
+  </script>
+</body>
+
+</html>
