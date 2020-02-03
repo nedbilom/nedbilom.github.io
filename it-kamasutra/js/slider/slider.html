@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .wrap {
+            width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: stretch;
+            margin-top: 300px;
+        }
+
+        .slider-img {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        .wrap .but-prev,
+        .wrap .but-next {
+            background-color: gold;
+            color: black;
+            width: auto;
+            border: none;
+        }
+
+        .wrap .but-prev:hover,
+        .wrap .but-next:hover {
+            background-color: rgb(194, 169, 28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <input class="but-prev" type="button" value="<PREVIE">
+        <img class="slider-img" src="" alt="slider.img">
+        <input class="but-next" type="button" value="NEXT>">
+    </div>
+    <script>
+        let prev = document.querySelector('.but-prev');
+        let next = document.querySelector('.but-next');
+        let img = document.querySelector('.slider-img');
+
+        let imgSrc = ['./img-slider/1.jpg', './img-slider/2.jpg', './img-slider/3.jpg', './img-slider/4.jpg', './img-slider/5.jpg',];
+
+        let counter = 0;
+        prev.disabled = true;
+
+        img.src = imgSrc[counter];
+
+        prev.addEventListener('mousedown', showPrevImg);
+        next.addEventListener('mousedown', showNextImg);
+
+        function showNextImg() {
+            counter++;
+            img.src = imgSrc[counter];
+            prev.disabled = false;
+            if (counter == imgSrc.length - 1) next.disabled = true;
+        };
+
+        function showPrevImg() {
+            counter--;
+            img.src = imgSrc[counter];
+            next.disabled = false;
+            if (counter == 0) prev.disabled = true;
+        }
+
+
+    </script>
+</body>
+
+</html>
