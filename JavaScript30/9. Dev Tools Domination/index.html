@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+
+    console.log('Hello!');
+    // Interpolated
+    // %s позволяет нам экранировать second атрибут в первый, ну как в ES6 `${}`
+    console.log('Hello, I am %s string', '++poop');
+
+    // Styled
+    // %c применяем стили из второго аргумента к первому
+    console.log('%c I am some great text', 'font-size: 50px; background-color: red;');
+
+    // warning!
+    console.warn('OH, NOOOOOOO!')
+
+
+    // Error :|
+    console.error('Shit!!!')
+
+    // Info
+    // В хроме походу не работает :\
+    console.info('В год крокодилы съедают 3-4 людей!');
+
+    // Testing
+    // assert возвращает ошибку, и сообщение из второго аргумента, только в том случае, если утверждение из первого аргумента возвращает false
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('styleName'), 'Параграф не содержит стиля с именем "styleName"!');
+    console.assert(1 === 1, 'Это ложь!!!');
+
+    // clearing
+    // Чистит все предыдущие сообщения в консоли
+    console.clear();
+
+    // Viewing DOM Elements
+    // Если нужно посмотреть дефолтные properties элемента, или methods можно воспользоваться console.dir();
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+
+    // Grouping together
+    // Если вам нужно вывести много console.log для разных элементов, имеет смысл сгруппировать их под одним именем, с помощью console.group(nameGroupe). Это позволит представить информацию в консоле в виде выпадающего списка, в конце группы следует закрыть её console.groupEnd(nameGroupe).
+    // Если вызвать groupCollapsed то по-умолчанию списки будут свернуты.
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    }
+    );
+
+    // counting
+    // считает сколько раз вы вызвали эту строку, объект, число...
+    console.count('molibden');
+    console.count('awercome');
+    console.count('molibden');
+    console.count('awercome');
+    console.count('awercome');
+    console.count('molibden');
+    console.count('molibden');
+    console.count('awercome');
+
+    // timing
+    // Позволяет нам засечь время кода, например запроса на стороний сервер
+    // Нужно обернуть интересущий код в обертку console.time('name') и закрыть console.timeEnd('name');
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    // table
+    // Представляет данные в виде таблицы, работает с объектами
+    console.table(dogs);
+  </script>
+</body>
+
+</html>
