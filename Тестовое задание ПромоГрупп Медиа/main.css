@@ -224,7 +224,7 @@ body {
   border-radius: 6px;
 }
 
-.inputHover:hover {
+.input:hover {
   border-color: #dddfe0;
 }
 
