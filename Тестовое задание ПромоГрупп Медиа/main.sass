@@ -1,0 +1,320 @@
+// Font
+$robotoFont: 'Roboto', sans-serif;
+$bold: 700;
+
+// Color
+$mainColor: #fefefe;
+$lightGrey: #dddfe0;
+$white: #fff;
+$red: #dd5656;
+$green: #6bbd8d;
+
+$errorColor: $red;
+$accessColor: $green;
+
+body
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  background: url(./material-design-linii-background-seryi-fon.jpg), no-repeat;
+
+*
+  box-sizing: inherit;
+
+.main
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 800px;
+  min-height: 600px;
+  color: $mainColor;
+  &__title
+    margin: 0px;
+    font-size: 26px;
+    font-weight: $bold;
+    font-family: $robotoFont
+
+.buttons
+  display: flex;
+  justify-content: space-evenly;
+
+.btn
+  cursor: pointer;
+  padding: 15px;
+  font-size: 14px;
+  width: 200px;
+  border: none;
+  font-family: $robotoFont
+  text-transform: uppercase;
+  font-weight: $bold;
+  border-radius: 6px;
+  color: #1d1d1d;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  &__showCode
+    background-color: #e0e0e0;
+    &:hover
+      background-color: #d5d5d5;
+    &:active
+      background-color: #9f9d9e;
+  &__showForm
+    background-color: #90caf9;
+    &:hover
+      background-color: #648eaf;
+    &:active
+      background-color: #4b687f;
+  &__send
+    background-color: #ffdd2d;
+    &:hover
+      background-color: #ffcd33;
+
+// Form
+.substrate
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+.open
+  display: block;
+  animation: openedModal .1s ease-in;
+
+.modalWindow
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  background-color: transparent;
+  max-width: 700px;
+  color: rgba(0,0,0,0.8);
+  &__header
+    position: relative;
+    background-color: #3e4757;
+    color: $mainColor;
+    border-radius: 6px 6px 0px 0px;
+  &__hideButton
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    fill: $mainColor;
+    background-color: transparent;
+    top: 5px;
+    right: 0px;
+  &__title
+    text-align: center;
+  &__form
+    display: flex;
+    flex-flow: row wrap;
+    background-color: $white;
+    padding: 20px 60px 10px;
+    border: 1px solid $lightGrey;
+    border-top: none;
+  &__footer
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: 0px 0px 6px 6px;
+    border: 1px solid $lightGrey;
+    border-top: none;
+    min-height: 100px;
+
+.form
+  &__field, &__textarea
+    min-height: 95px;
+    width: 100%;
+  &__field_birthdate, &__field_telephone
+    width: 49%;
+  &__field_birthdate
+    margin-right: 2%;
+
+.field
+  position: relative;
+  overflow: hidden;
+
+.label
+  position: absolute;
+  padding-top: 17px;
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  color: #9299a2;
+  cursor: text;
+  transition: .35s;
+  &-focus
+    padding-top: 8px;
+    font-size: 14px;
+
+.input
+  box-sizing: border-box;
+  width: 100%;
+  padding: 25px 6px 15px 17px;
+  color: #333;
+  font-size: 17px;
+  background-color: #eef2f7;
+  border: 1px solid #eef2f7;
+  border-radius: 6px;
+
+// Проверить нужен ли вообще этот селектор
+.inputHover:hover
+  border-color: $lightGrey;
+
+.focus
+  background-color: $white;
+  border: 1px solid $lightGrey;
+
+.transparent
+  &::-webkit-input-placeholder
+    color: transparent;
+  &:-moz-placeholder
+    color: transparent;
+  &::-moz-placeholder
+    color: transparent;
+  &:-ms-input-placeholder
+    color: transparent;
+
+.focus
+  &::-webkit-input-placeholder
+    color: #dfdee1;
+  &:-moz-placeholder
+    color: #dfdee1;
+  &::-moz-placeholder
+    color: #dfdee1;
+  &:-ms-input-placeholder
+    color: #dfdee1;
+
+.access__icon
+  position: absolute;
+  top: 30%;
+  right: 2%;
+
+.clear__button
+  position: absolute;
+  cursor: pointer;
+  top: 30%;
+  right: 2%;
+
+.error
+  border-color: $errorColor;
+  &:hover
+    border-color: $errorColor;
+  
+
+.access
+  border-color: $accessColor;
+  &:hover
+    border-color: $accessColor;
+
+.error__message,
+.invalid__report
+  margin-top: 5px;
+  margin-bottom: 8px;
+  color: $errorColor;
+  
+.error__name,
+.error__birthdate,
+.error__email,
+.error__message,
+.error__telephone,
+.invalid__name,
+.invalid__email,
+.invalid__birthdate,
+.invalid__telephone,
+.accessName,
+.accessEmail,
+.accessBirthdate,
+.accessTelephone,
+.clearName,
+.clearEmail,
+.clearBirthdate,
+.clearTelephone,
+.success__message
+  display: none;
+
+.form__success
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  color: $accessColor;
+
+
+/* Animation */
+
+@keyframes openedModal
+  0%
+    opacity: 0;
+    transform: scale(.5);
+  50%
+    opacity: .3;
+  100%
+    opacity: 1;
+    transform: scale(1);
+
+/* Media queries */
+
+@media (max-width: 840px)
+  .main
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+  .main__title
+    margin-bottom: 10px;
+
+  .buttons
+    justify-content: space-around;
+    width: 500px;
+
+  // Form
+  .modalWindow
+    width: 100%;
+    height: 100%;
+    margin: 10px auto;
+
+  .form__field_birthdate,
+  .form__field_telephone
+    width: 100%;
+
+  .form__field_birthdate
+    margin-right: 0%;
+
+@media (max-width: 700px)
+  .modalWindow
+    margin: 0px;
+
+  .modalWindow__header
+    border-radius: 0px;
+
+  .modalWindow__footer
+    border-radius: 0px;
+
+@media (max-width: 500px)
+  .main__title
+    font-size: 34px;
+
+  .btn__showForm,
+  .btn__showCode
+    width: 300px;
+    height: 100px;
+
+  .buttons
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+  
+  .btn__showForm
+    margin-top: 20px;
+
+  .modalWindow__form
+    padding: 20px 20px 10px;
+
+@media (max-width: 400px)
+  .label
+    font-size: 18px;

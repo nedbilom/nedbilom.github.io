@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тестовое задание на вакансию Junior Web-developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <main class="main">
+    <div>
+      <h1 class="main__title">Тестовое задание на вакансию Junior Web-developer</h1>
+      <span class="main__subtitle">Для компании ПромоГрупп Медиа</span>
+    </div>
+
+    <div class="main__techList techList">
+      <span>Использовались технологии:</span>
+      <ul>
+        <li>HTML</li>
+        <li>CSS, SASS</li>
+        <li>Vanilla JavaScript</li>
+        <li>БЭМ</li>
+        <li>Адаптивно</li>
+        <li>Валидация</li>
+      </ul>
+    </div>
+    <div class="buttons">
+      <a href="#" target="_blank"><button class="btn btn__showCode">Посмотреть код</button></a>
+      <button class="btn btn__showForm">Показать форму</button>
+    </div>
+    <!-- Modal -->
+    <div class="substrate">
+      <div class="modalWindow">
+        <div class="modalWindow__header">
+          <button class="modalWindow__hideButton">
+            <svg width="29" height="29"><path d="M20.13 8.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62" fill-rule="evenodd"></path></svg>
+          </button>
+          <h2 class="modalWindow__title">Форма обратной связи</h2>
+        </div>
+        <!-- Form -->
+        <form class="modalWindow__form form" action="#" method="GET">
+          <!-- Name -->
+          <div class="form__field">
+            <div class="field">
+              <label class="label labelName" for="field__name">Фамилия, имя и отчество*</label>
+              <input type="text" data-field="name" data-status="none" class="input inputHover transparent" id="field__name"
+                placeholder="Стан Денис Игоревич">
+              <svg class="clear__button clearName" data-field="name" width="32" height="32" fill="#dd5656">
+                <path
+                  d="M20.13 8.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62"
+                  fill-rule="evenodd"></path>
+              </svg>
+              <svg class="access__icon accessName" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                viewBox="0 0 48 48" style=" fill:#6bbd8d;" data-field="name">
+                <path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"></path>
+              </svg>
+            </div>
+            <span class="error__message error__name" data-field="name">Укажите ваше ФИО</span><span
+              class="invalid__report invalid__name" data-field="name">Введите
+              фамилию, имя и отчество через пробел (Например: Иванов Иван Иванович)</span>
+          </div>
+
+          <!-- Email -->
+          <div class="form__field">
+            <div class="field">
+              <label class="label" for="field__email">Укажите email*</label>
+              <input type="text" data-field="email" data-status="none" class="input inputHover transparent" id="field__email"
+                placeholder="molibden992@gmail.com">
+              <svg class="clear__button clearEmail" data-field="email" width="32" height="32" fill="#dd5656">
+                <path
+                  d="M20.13 8.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62"
+                  fill-rule="evenodd"></path>
+              </svg>
+              <svg class="access__icon accessEmail" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25"
+                viewBox="0 0 48 48" style=" fill:#6bbd8d;" data-field="email">
+                <path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"></path>
+              </svg>
+            </div>
+            <span class="error__message error__email" data-field="email">Укажите ваш Email</span><span
+              class="invalid__report invalid__email" data-field="email">Введите корректный адрес эл. почты</span>
+          </div>
+
+          <!-- Birthdate -->
+          <div class="form__field form__field_birthdate">
+            <div class="field">
+              <label class="label" for="field__birthdate">Дата рождения*</label>
+              <input type="text" maxlength="10" data-field="birthdate" data-status="none" class="input inputHover transparent"
+                id="field__birthdate" placeholder="07.08.1992">
+              <svg class="clear__button clearBirthdate" data-field="birthdate" width="32" height="32" fill="#dd5656">
+                <path
+                  d="M20.13 8.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62"
+                  fill-rule="evenodd"></path>
+              </svg>
+              <svg class="access__icon accessBirthdate" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
+                height="25" viewBox="0 0 48 48" style=" fill:#6bbd8d;" data-field="birthdate">
+                <path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"></path>
+              </svg>
+            </div>
+            <span class="error__message error__birthdate" data-field="birthdate">Укажите дату рождения</span><span
+              class="invalid__report invalid__birthdate" data-field="birthdate">Поле заполнено не корректно</span>
+          </div>
+
+          <!-- Telephone -->
+          <div class="form__field form__field_telephone">
+            <div class="field">
+              <label class="label" for="field__telephone">Мобильный телефон*</label>
+              <input type="tel" data-field="telephone" data-status="none" class="input inputHover transparent" id="field__telephone"
+                placeholder="+7 (963) 183-07-17">
+              <svg class="clear__button clearTelephone" data-field="telephone" width="32" height="32" fill="#dd5656">
+                <path
+                  d="M20.13 8.11l-5.61 5.61-5.6-5.61-.81.8 5.61 5.61-5.61 5.61.8.8 5.61-5.6 5.61 5.6.8-.8-5.6-5.6 5.6-5.62"
+                  fill-rule="evenodd"></path>
+              </svg>
+              <svg class="access__icon accessTelephone" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25"
+                height="25" viewBox="0 0 48 48" style=" fill:#6bbd8d;" data-field="telephone">
+                <path fill="#43A047" d="M40.6 12.1L17 35.7 7.4 26.1 4.6 29 17 41.3 43.4 14.9z"></path>
+              </svg>
+            </div>
+            <span class="error__message error__telephone" data-field="telephone">Укажите ваш номер телефона</span>
+            <span class="invalid__report invalid__telephone" data-field="telephone">Номер телефона должен состоять из 10
+              цифр</span>
+          </div>
+
+          <!-- Message -->
+          <div class="form__textarea">
+            <div class="field">
+              <label class="label" for="field__account">Сообщение*</label>
+              <textarea name="message" id="field__account" data-field="account" data-status="none" class="input inputHover transparent" cols="30"
+                rows="10" placeholder="Введите ваше сообщение"></textarea>
+            </div>
+            <span class="error__message error__account" data-field="account">Поле должно быть заполнено</span>
+          </div>
+          <div class="form__success success">
+            <span class="success__message">Форма отправлена!</span>
+          </div>
+        </form>
+        <div class="modalWindow__footer">
+          <button class="btn btn__send">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+<script src="./main.js"></script>
+</body>
+
+</html>
