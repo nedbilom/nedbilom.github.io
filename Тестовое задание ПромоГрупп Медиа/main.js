@@ -47,7 +47,12 @@ clearButtons.forEach((cross) => {
 })
 
 birthdate.addEventListener('keydown', (event) => {
+
+  console.log(event.keyCode);
+
   (event.keyCode >= 48 && event.keyCode <= 57)
+    || (event.keyCode >= 96 && event.keyCode <= 105)
+    || event.keyCode === 110 || event.keyCode === 144
     || event.keyCode === 8 || event.keyCode === 37
     || event.keyCode === 39 || event.key === '.'
     || event.keyCode === 9
