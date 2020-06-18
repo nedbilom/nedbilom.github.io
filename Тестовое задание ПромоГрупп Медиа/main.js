@@ -69,6 +69,7 @@ function checkForm() {
   
       const currentError = findRelatedItem(field, errorsNode);
       currentError.style.display = 'inline-block';
+    } else {
       success++;
     }
   })
@@ -170,10 +171,10 @@ function addAccess(field) {
 }
 
 function removeAccess(field) {
-
-  if (field === textarea) return;
   field.classList.remove('access');
 
+  if (field === textarea) return;
+  
   const currentIcon = findRelatedItem(field, accessIcons); 
 
   currentIcon.style.display = 'none';
