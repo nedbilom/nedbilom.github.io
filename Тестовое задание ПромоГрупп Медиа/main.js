@@ -61,7 +61,7 @@ telephone.addEventListener("blur", inputTelephone, false);
 telephone.addEventListener("keydown", inputTelephone, false);
 
 function checkForm() {
-  let success = false;
+  let success = 0;
 
   fieldNode.forEach((field) => {
     if (!(field.dataset.status === 'access')) {
@@ -69,12 +69,11 @@ function checkForm() {
   
       const currentError = findRelatedItem(field, errorsNode);
       currentError.style.display = 'inline-block';
-    } else {
-      success = true;
+      success++;
     }
   })
 
-  success ? successMessage.style.display = 'inline' : null;
+  success === 5? successMessage.style.display = 'inline' : null;
 }
 
 function showForm() {
