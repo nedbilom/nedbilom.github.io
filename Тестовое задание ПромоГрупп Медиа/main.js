@@ -172,6 +172,7 @@ function addAccess(field) {
 
 function removeAccess(field) {
   field.classList.remove('access');
+  field.dataset.status = 'none';
 
   if (field === textarea) return;
   
