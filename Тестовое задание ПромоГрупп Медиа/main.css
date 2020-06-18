@@ -35,6 +35,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.becarefull {
+  color: #dd5656;
+}
+
 .buttons {
   display: -webkit-box;
   display: -ms-flexbox;
