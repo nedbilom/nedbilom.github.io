@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="./assets/normalizi.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <img src="./assets/svg/Logo.svg" alt="Proektmarketing +1">
+    </header>
+    <main class="main">
+      <h1 class="main__title">Я — разработчик</h1>
+
+      <form class="form" action="#">
+        <section class="section about-section">
+          <h2 class="section__title"><button class="about-section__btn">Расскажите о себе</button></h2>
+
+          <div class="section__template">
+            <p class="section__desc">
+              Поля не являются обязательными, но помимо вашего имени, нам бы хотелось знать из какого вы города, сколько
+              вам лет и как с вами связаться
+            </p>
+
+            <fieldset class="section__fields">
+              <img class="about-section__photo" src="./assets/img/pFenIgXHRzI.jpg" alt="Фото песика">
+              <label class="about-section__label about-section__hobby"><span class="about-section__field-name">Ваше
+                  хобби</span>
+                <input class="about-section__input" type="text" name="hobby" value="Разработка сайтов и приложений">
+              </label>
+              <label class="about-section__label"><span class="about-section__field-name">Имя</span>
+                <input class="about-section__input" type="text" name="name" value="Стан Денис">
+              </label>
+              <label class="about-section__label">
+                <span class="about-section__field-name">Год рождения</span>
+                <input class="about-section__input" type="number" name="year" min="1900" max="2015" step="1"
+                  value="1992" />
+              </label>
+              <label class="about-section__label">
+                <span class="about-section__field-name">Город</span>
+                <input class="about-section__input" type="text" name="city" value="Красноярск">
+              </label>
+              <label class="about-section__label">
+                <span class="about-section__field-name">Телеграм</span>
+                <input class="about-section__input" type="text" name="telegram" value="@standarth">
+              </label>
+              <label class="about-section__label">
+                <span class="about-section__field-name">Почта</span>
+                <input class="about-section__input" type="email" name="email" value="molibden992@gmail.com">
+              </label>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="section skills-section">
+          <h2 class="section__title">Отметьте ваши навыки</h2>
+
+          <div class="section__template">
+            <p class="section__desc">
+              Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что
+              у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с
+              которыми гарантировано будете справляться.
+            </p>
+
+            <div class="section__fields">
+              <fieldset>
+                <ul class="skills-section__list">
+                  <li><label><input checked type="checkbox" name="bem" value="bem"><span
+                        class="skill-name">БЭМ/OOCSS</span></label></li>
+                  <li><label><input checked type="checkbox" name="pug" value="pug"><span class="skill-name">Pug
+                        (Jade)</span></label></li>
+                  <li><label><input checked type="checkbox" name="scss" value="scss"><span
+                        class="skill-name">Stylus/LESS/SASS</span></label></li>
+                  <li><label><input type="checkbox" name="svg" value="svg"><span class="skill-name">Работаю с
+                        SVG</span></label></li>
+                  <li><label><input checked type="checkbox" name="semantic" value="semantic"><span
+                        class="skill-name">Верстаю
+                        семантично</span></label></li>
+                  <li><label><input checked type="checkbox" name="accessibility" value="accessibility"><span
+                        class="skill-name">Accessibility
+                        (A11Y)</span></label></li>
+                  <li><label><input checked type="checkbox" name="es6" value="es6"><span
+                        class="skill-name">ES2015/ES2016</span></label></li>
+                </ul>
+
+                <ul class="skills-section__list">
+                  <li><label><input checked type="checkbox" name="gulp" value="gulp"><span
+                        class="skill-name">Gulp/GRUNT</span></label></li>
+                  <li><label><input checked type="checkbox" name="webpack" value="webpack"><span
+                        class="skill-name">Webpack</span></label></li>
+                  <li><label><input type="checkbox" name="webgl" value="webgl"><span class="skill-name">Дружу с
+                        WebGL</span></label></li>
+                  <li><label><input type="checkbox" name="jquery" value="jquery"><span
+                        class="skill-name">jQuery</span></label></li>
+                  <li><label><input type="checkbox" name="angular" value="angular"><span class="skill-name">Знаю/изучаю
+                        Angular</span></label></li>
+                  <li><label><input checked type="checkbox" name="react" value="react"><span
+                        class="skill-name">Знаю/изучаю React</span></label>
+                  </li>
+                  <li><label><input type="checkbox" name="nodejs" value="nodejs"><span class="skill-name">Знаю/изучаю
+                        Node.js</span></label></li>
+                </ul>
+
+                <ul class="skills-section__list">
+                  <li><label><input checked type="checkbox" name="git" value="git"><span class="skill-name">Использую
+                        Git</span></label></li>
+                  <li><label><input checked type="checkbox" name="pixelperfect" value="pixelperfect"><span
+                        class="skill-name">С глазомером всё
+                        <span class="skills-section__pixelperfect">ок</span></span></label></li>
+                  <li><label><input type="checkbox" name="lazy" value="lazy"><span class="skill-name">Я
+                        ленивый(-ая)</span></label></li>
+                  <li><label><input type="checkbox" name="english" value="english"><span class="skill-name">У меня
+                        хороший
+                        английский</span></label></li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <section class="section js-section">
+          <h2 class="section__title">Уровень владения Javascript</h2>
+
+          <div class="section__template">
+            <fieldset class="section__fields">
+              <input class="js-section__range" type="range" min="0" max="3" value="2" step="1">
+              <ul class="points">
+                <li class="points__point">Не владею</li>
+                <li class="points__point">Использую готовые решения</li>
+                <li class="points__point">Использую готовые решения и умею их переделывать</li>
+                <li class="points__point">Пишу сложный JS с нуля</li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+
+        <section class="section aboutme-section">
+          <h2 class="section__title">Расскажите о себе словами</h2>
+
+          <div class="section__template">
+            <p class="section__desc">
+              Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в Proektmarketing.
+              Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+            </p>
+
+            <div class="section__fields">
+              <fieldset>
+                <textarea class="aboutme-section__textarea" name="aboutme" rows="10" placeholder="Введите текст">
+Разработкой сайтов я стал увлекаться несколько лет назад в качестве хобби. Начинал с основ верстки: html, css, и постепенно углублялся все дальше, осваивая новые инструменты разработки. Затем я углубился в изучение javascript, typescript и наконец дошел до использования библиотеки React с ее экосистемой.
+
+В прошлом году принял участия в студенческой практике компании Sibdev по направлению React-а, в итоге которой занял первое место в рейтинговой системе из более чем 200 человек. Благодаря чему попал на стажировку в компанию.
+
+От работы в Proektmarketing я ожидаю прокачивание своих скиллов, опыт коммерческой разработки приложений, опыта командной разработки и интересных задач.
+
+А самое главное это возможность превратить свое хобби в профессиональное занятие.
+                  </textarea>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <section class="section plans-section">
+          <h2 class="section__title">Какие у вас планы на будущее</h2>
+
+          <div class="section__template">
+            <p class="section__desc">
+              Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+            </p>
+
+            <div class="section__fields">
+              <fieldset>
+                <ul class="plans">
+                  <li class="plan"><label><input type="radio" name="plan"><span
+                        class="plan__name">Верстать</span></label></li>
+                  <li class="plan"><label><input type="radio" checked name="plan"><span class="plan__name">Прокачиваться
+                        в JS</span></label></li>
+                  <li class="plan"><label><input type="radio" name="plan"><span
+                        class="plan__name">Менеджерство</span></label></li>
+                  <li class="plan"><label><input type="radio" name="plan"><span class="plan__name">Другое (уйти в
+                        калиграфию, быть как Покрас Лампас)</span></label></li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <input class="submit" type="submit" value="Отправить">
+      </form>
+    </main>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
