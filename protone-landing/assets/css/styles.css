@@ -1,34 +1,34 @@
 @font-face {
   font-family: "Fact-Compressed";
-  src: url("/assets/fonts/Fact-CompressedBold.woff2") format("woff2");
+  src: url("../fonts/Fact-CompressedBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Fact-Condensed";
-  src: url("/assets/fonts/Fact-CondensedBold.woff2") format("woff2");
+  src: url("../fonts/Fact-CondensedBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Fact-Expanded";
-  src: url("/assets/fonts/Fact-ExpandedLight.woff2") format("woff2");
+  src: url("../fonts/Fact-ExpandedLight.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Fact-Expanded";
-  src: url("/assets/fonts/Fact-Expanded.woff2") format("woff2");
+  src: url("../fonts/Fact-Expanded.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Fact-Expanded";
-  src: url("/assets/fonts/Fact-ExpandedBold.woff2") format("woff2");
+  src: url("../fonts/Fact-ExpandedBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -452,7 +452,7 @@ html {
   line-height: 25px;
 }
 .team .team__swiper-desktop .swiper .swiper-slide .team__list .team__item--openings {
-  background-image: url(/assets/images/team/openings-bg.png);
+  background-image: url("../images/team/openings-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -616,7 +616,7 @@ html {
   }
 }
 .team .team__swiper-mobile .swiper .swiper-slide .team__item--openings {
-  background-image: url(/assets/images/team/openings-bg.png);
+  background-image: url("../images/team/openings-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
